@@ -1,0 +1,49 @@
+[user]
+  name = Maxwell Salzberg
+  email = maxwell@backerkit.com
+[github]
+  user = maxwell
+[apply]
+  whitespace = nowarn
+[bash]
+  showDirtyState=true
+[branch]
+  autosetuprebase = always
+  autosetupmerge = always
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+  ui = true
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+[alias]
+  st = status
+  ci = commit
+  ca = commit -a -m
+  co = checkout
+  br = branch -a
+  branches = branch -a
+  pick = cherry-pick
+# Any GitHub repo with my username should be checked out r/w by default
+# http://rentzsch.tumblr.com/post/564806957/public-but-hackable-git-submodules
+[url "git@github.com:maxwell/"]
+  insteadOf = "git://github.com/maxwell/"
+[credential]
+	helper = osxkeychain
+[push]
+	default = matching
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
